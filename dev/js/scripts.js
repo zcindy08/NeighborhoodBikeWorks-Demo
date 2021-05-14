@@ -1,9 +1,10 @@
 //IMPORTS
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 //register Plugins
-gsap.registerPlugin(GSDevTools);
+gsap.registerPlugin(GSDevTools,MotionPathPlugin);
 
 //**** SELECT ELEMENTS without jQuery ****\\
 
@@ -71,7 +72,7 @@ ready(() => {
   gsap.set('#svg-container',{visibility:"visible"});
 
   //3. BUILD Main timeline
-//  mainTL.add(fadeInTL())
+  mainTL.add(fadeInTL())
 
 
   //;//tl END
